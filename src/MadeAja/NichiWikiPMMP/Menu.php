@@ -24,11 +24,6 @@ class Menu
         $player->dataPacket($packet);
     }
 
-   /**
-     * @param Player $player
-     * @param $data
-     * @param $time
-     */
     public static function sendSuccessQuery(Player $player, $data, $time)
     {
         $dataArray = [];
