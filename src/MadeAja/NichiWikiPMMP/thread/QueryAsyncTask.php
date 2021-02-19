@@ -21,12 +21,7 @@ class QueryAsyncTask extends AsyncTask
      */
     private $time;
 
-    /**
-     * QueryAsyncTask constructor.
-     * @param Player $player
-     * @param $search
-     * @param $time
-     */
+
     public function __construct(Player $player, $search, $time)
     {
         $this->search = $search;
