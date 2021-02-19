@@ -1,0 +1,9 @@
+name: NichiWikiPMMP
+version: 1.0
+api: 3.0.0
+author: MadeAja
+main: MadeAja\NichiWikiPMMP\Wiki
+
+commands:
+   wiki:
+     description: Get a information wikipedia in pocketmine
