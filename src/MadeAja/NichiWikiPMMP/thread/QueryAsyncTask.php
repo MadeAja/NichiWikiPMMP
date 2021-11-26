@@ -8,6 +8,8 @@ use MadeAja\NichiWikiPMMP\Menu;
 use pocketmine\Player;
 use pocketmine\scheduler\AsyncTask;
 use pocketmine\Server;
+use pocketmine\utils\Internet;
+use function json_decode;
 
 class QueryAsyncTask extends AsyncTask
 {
@@ -31,7 +33,7 @@ class QueryAsyncTask extends AsyncTask
 
     public function onRun()
     {
-        $data = file_get_contents("https://id.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=".$this->search);
+        $data = Internet::getURL("https://id.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=".$this->search);
         $data = json_decode($data, true);
         $this->setResult($data['query']);
     }
